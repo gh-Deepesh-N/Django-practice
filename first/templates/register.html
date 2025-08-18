@@ -33,5 +33,11 @@
 
         <button type="submit">Register</button>
     </form>
+
+    <div>
+        {% for message in messages %}
+            <p style="color: red;">{{ message }}</p>
+        {% endfor %}
+    </div>
 </body>
 </html>

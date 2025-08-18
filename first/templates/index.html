@@ -32,8 +32,14 @@
 								<ul class="d-flex flex-row align-items-start justify-content-start">
 									<li class="active"><a href="{% url 'index' %}">Home</a></li>
 									<li><a href="{% url 'contact' %}">Contact</a></li>
+
+									{% if user.is_authenticated %}
+									
+									<li><a href="{% url 'logout' %}">Logout</a></li>
+									{% else %}
 									<li><a href="{% url 'register' %}">Register</a></li>
 									<li><a href="{% url 'login' %}">Login</a></li>
+									{% endif %}
 								</ul>
 							</nav>
 							<div class="header_phone ml-auto">Call us: 00-56 445 678 33</div>
